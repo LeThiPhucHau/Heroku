@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   res.render('employee/addOrEdit', {
-    viewTitle: 'Thêm nhân viên',
+    viewTitle: 'Thêm sinh viên',
   });
 });
 
@@ -35,7 +35,7 @@ function insertRecord(req, res) {
           employee: req.body,
         });
       }
-      console.log('Đã xảy ra lỗi khi thêm nhân viên' + err);
+      console.log('Đã xảy ra lỗi khi thêm sinh viên' + err);
     }
   });
 }
