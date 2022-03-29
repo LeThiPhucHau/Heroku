@@ -77,7 +77,7 @@ router.get('/:id', (req, res) => {
   Employee.findById(req.params.id, (err, doc) => {
     if (!err) {
       res.render('employee/addOrEdit', {
-        viewTitle: 'Update Employee',
+        viewTitle: ' Cập nhật thông tin',
         employee: doc,
       });
     }
@@ -89,7 +89,7 @@ router.get('/delete/:id', (req, res) => {
     if (!err) {
       res.redirect('/employee/list');
     } else {
-      console.log('An error occured during the Delete Process' + err);
+      console.log('Đã xảy ra lỗi trong quá trình xóa' + err);
     }
   });
 });
